@@ -18,7 +18,7 @@
         color: $gunmetal;
         font-size: $body-fz;
         line-height: $body-lh;
-        &:active{
+        &:active {
           color: $btn-cl;
         }
       }
@@ -38,10 +38,5 @@
   }
   .header__item {
     display: none;
-  }
-  .header__nav__toggler {
-    background-color: transparent;
-    border: none;
-    display: block;
   }
 }

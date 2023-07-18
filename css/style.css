@@ -426,11 +426,6 @@ body {
   .header__item {
     display: none;
   }
-  .header__nav__toggler {
-    background-color: transparent;
-    border: none;
-    display: block;
-  }
 }
 main {
   flex-grow: 1;
