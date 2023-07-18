@@ -603,6 +603,7 @@ main {
   .section__second {
     flex-direction: column;
     margin-bottom: 8rem;
+    padding: 2.4rem 2rem;
   }
   .card {
     width: 343px;
