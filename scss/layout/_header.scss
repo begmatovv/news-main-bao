@@ -3,8 +3,7 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  padding-top: 9rem;
-  margin-bottom: 5.5rem;
+  margin: 5.5rem 0;
 
   .header__nav__toggler {
     display: none;
@@ -25,6 +24,23 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .header__item {
+    display: none;
+  }
+
+  .header__container {
+    padding-top: 2.8rem;
+    margin-bottom: 3.2rem;
+    .header__nav__toggler {
+      background-color: transparent;
+      border: none;
+      display: block;
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   .header__container {
     width: 343px;

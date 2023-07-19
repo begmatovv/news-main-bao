@@ -8,20 +8,20 @@ main {
   margin-bottom: 7.1rem;
 }
 .section__top {
-  display: flex;
-  flex-direction: column;
-  width: 730px;
-  margin-bottom: 3.2rem;
+  width: 100%;
+  max-width: 730px;
   img {
+    width: 100%;
     margin-bottom: 2.8rem;
   }
 
   .section__top__content {
     display: flex;
-    gap: 3rem;
+    justify-content: space-between;
     h1 {
       color: $heading-color;
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
       font-size: $h1-fz;
       line-height: $h1-lh;
       font-weight: 800;
@@ -30,13 +30,22 @@ main {
     }
     .section__top__info {
       p {
-        width: 350px;
         color: $gunmetal;
         font-size: $body-fz;
         line-height: $body-lh;
         margin-bottom: 3rem;
+        text-align: left;
       }
+
       .section__top__btn {
+        color: $heading-color-white;
+        font-size: $btn-fz;
+        font-weight: 700;
+        line-height: $btn-lh;
+        letter-spacing: 4.375px;
+        text-align: left;
+        width: 100%;
+        max-width: 350px;
         background-color: $btn-cl;
         padding: 1.2rem 3rem;
         &:active {
@@ -48,6 +57,8 @@ main {
 }
 
 .section-side {
+  width: 100%;
+  max-width: 350px;
   padding: 3.1rem 2.4rem;
   background-color: $heading-color;
   color: $heading-color-white;
@@ -70,6 +81,7 @@ main {
     margin-bottom: 0.8rem;
     &:active {
       color: $yellow;
+      cursor: pointer;
     }
   }
   p {
@@ -83,26 +95,30 @@ main {
 }
 
 .side__divider {
-  width: 302px;
   background-color: $gunmetal;
   border: 1px solid transparent;
   margin-bottom: 3.1rem;
 }
 
 .section__second {
-  width: 1100px;
   display: flex;
-  gap: 3rem;
-  padding-left: 0;
-  margin-bottom: 13rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .card {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   display: flex;
-  gap: 2.4rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
 }
 .content__wrapper {
-  width: 350px;
+  width: 100%;
+  max-width: 226px;
+  display: flex;
+  flex-direction: column;
   h2 {
     font-size: $h2-fz-sm;
     line-height: $h2-lh-sm;
@@ -130,32 +146,110 @@ main {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1170px) {
   .section {
     flex-direction: column;
   }
   .section__top {
-    display: flex;
+    max-width: 1110px;
+    margin-bottom: 6.4rem;
+  }
+  .section-side {
+    max-width: 1110px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .card {
+    margin: 3rem auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section__top {
+    width: 500px;
+  }
+  .section__top__content {
     flex-direction: column;
-    width: 730px;
+    h1 {
+      max-width: 1110px;
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .section__top__info {
+    max-width: 1110px;
+    text-align: center;
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  .header__container {
+    padding: 3.2rem 0;
+  }
+  .section__top__content {
+    text-align: left;
+    font-size: 4rem;
+    max-width: 320px;
+  }
+  .section__top__info {
+    text-align: left;
+    p {
+      text-align: left;
+    }
+    .section__top__btn {
+      text-align: left;
+    }
+  }
+
+  .section__second {
+    gap: 3.2rem;
+  }
+  .card {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .section__top {
+    flex-direction: column;
+    width: 100%;
+    max-width: 730px;
     img {
       margin-bottom: 2.4rem;
-      width: 343px;
+      width: 100%;
+      max-width: 343px;
+    }
+    .section__top__btn {
+      max-width: 343px;
     }
 
     .section__top__content {
-      display: flex;
       flex-direction: column;
       gap: 3rem;
       h1 {
-        width: 343px;
+        width: 100%;
+        max-width: 343px;
         font-size: $h2-fz;
         line-height: $h2-lh;
         margin-bottom: 1.6rem;
       }
       .section__top__info {
         p {
-          width: 343px;
+          width: 100%;
+          max-width: 343px;
           margin-bottom: 2.4rem;
         }
       }
@@ -163,8 +257,7 @@ main {
   }
 
   .section-side {
-    width: 343px;
-    padding: 2.4rem 2rem;
+    max-width: 343px;
     h2 {
       font-size: $h2-fz-sm;
       line-height: $h2-lh-sm;
@@ -174,8 +267,6 @@ main {
   .section__second {
     flex-direction: column;
     margin-bottom: 8rem;
-    padding: 2.4rem 2rem;
-    padding-left: 5rem
   }
   .card {
     width: 343px;
